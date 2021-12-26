@@ -1,4 +1,5 @@
-import { heroes } from '../data/heroes'
+import { heroes } from '../data/heroes';
+
 
 export const getHeroById = (id = '') => {
     console.log('getHeroById Called');

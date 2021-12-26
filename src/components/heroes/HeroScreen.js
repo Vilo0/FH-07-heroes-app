@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
-import { getHeroById } from '../selectors/getHeroById';
+import { getHeroById } from '../../selectors/getHeroById';
 
 export const HeroScreen = () => {
 
@@ -34,11 +34,11 @@ export const HeroScreen = () => {
                 <img 
                     src={ imagePath } 
                     alt={ superhero }
-                    className="img-thumbnail  animate__animated animate__fadeInLeft"
+                    className="img-thumbnail animate__animated animate__fadeInLeft"
                 />
             </div>
 
-            <div className="col-8  animate__animated animate__fadeIn">
+            <div className="col-8 animate__animated animate__fadeIn">
                 <h3>{ superhero }</h3>
                 <ul className="list-group">
                     <li className="list-group-item"><b>Alter Ego: </b>{ alter_ego }</li>
