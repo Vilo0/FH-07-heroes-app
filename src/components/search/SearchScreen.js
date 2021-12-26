@@ -1,4 +1,6 @@
+import { HeroCard } from '../heroes/HeroCard';
 import { useForm } from '../hooks/useForm';
+import { getHeroesByName } from '../selectors/getHeroesByName';
 
 export const SearchScreen = () => {
 
@@ -8,6 +10,7 @@ export const SearchScreen = () => {
 
     const [ formValues, handleInputChange, reset ] = useForm( initialForm );
     const { searchText } = formValues;
+    const heroesFilted = getHeroesByName('Algo por Aqui');
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -42,6 +45,17 @@ export const SearchScreen = () => {
                             Buscar ...
                         </button>
                     </form>
+                </div>
+
+                <div className="col-7">
+                    <h4>Resultados</h4>
+                    <hr />
+
+                    {
+                        heroesFilted.map(hero => (
+                            <HeroCard key={hero.id} {...hero} />
+                        ))
+                    }
                 </div>
             </div>
         </>
