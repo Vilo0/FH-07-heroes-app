@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { LoginScreen } from '../components/login/LoginScreen'
-import { Navbar } from '../components/ui/Navbar'
 import { DashboardRoutes } from './DashboardRoutes'
 
 export const AppRouter = () => {
